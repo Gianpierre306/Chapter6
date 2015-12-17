@@ -10,11 +10,10 @@ int main()
     double markUpPercentage = 0.0;
     double markUpAmount = 0.0;
     
-   
         cout << "Enter the item whole sale price:";
-        cin >> itemPrice;
+         cin >> itemPrice;
         cout << "Enter the mark up percentage of the item:";
-        cin >> markUpPercentage;
+         cin >> markUpPercentage;
     
       while(itemPrice <=0)
       {
@@ -22,14 +21,12 @@ int main()
              << " We do not accept any negative value."
              << " \nPlease re-enter a postive value for item:"
              << "$";
-        cin >> itemPrice;
+         cin >> itemPrice;
       }
             while(markUpPercentage <=0)
             {
-                
             cout << "\nPlease re-enter a postive value for the markup percentage:";
-            cin >> markUpPercentage;
-                
+             cin >> markUpPercentage;
             }
         
         markUpAmount = calculateRetail(itemPrice, markUpPercentage);
@@ -38,14 +35,12 @@ int main()
         cout << "The new retail price of the item with the markup percentage is: "
              << "$" << markUpAmount;
         
-
-    
-    
-    return 0;
+         return 0;
 }
 
 double calculateRetail(double price, double percentage)
-{   double markUpAmount = price*(percentage/100);
+{   
+    double markUpAmount = price*(percentage/100);
     double newPrice = price+markUpAmount;
     
     return newPrice;
