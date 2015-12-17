@@ -8,9 +8,9 @@ int main()
 {
     double itemPrice = 0.0;
     double markUpPercentage = 0.0;
-    double total = 0.0;
+    double markUpAmount = 0.0;
     
-    do {
+   
         cout << "Enter the item whole sale price:";
         cin >> itemPrice;
         cout << "Enter the mark up percentage of the item:";
@@ -32,21 +32,21 @@ int main()
                 
             }
         
-        total = calculateRetail(itemPrice, markUpPercentage);
+        markUpAmount = calculateRetail(itemPrice, markUpPercentage);
    
         cout << fixed << showpoint << setprecision(2);
         cout << "The new retail price of the item with the markup percentage is: "
-             << "$" << total;
+             << "$" << markUpAmount;
         
-    } while( itemPrice <=0 || markUpPercentage <=0);
+
     
     
     return 0;
 }
 
 double calculateRetail(double price, double percentage)
-{   double total = price*(percentage/100);
-    double newPrice = price+total;
+{   double markUpAmount = price*(percentage/100);
+    double newPrice = price+markUpAmount;
     
     return newPrice;
 }
