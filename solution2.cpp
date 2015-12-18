@@ -55,25 +55,27 @@ void findHighest(double norEastSales, double norWestSales,double souEastSales, d
     double highest =0.0;
     
     if(norEastSales > norWestSales && norEastSales > souEastSales && norEastSales > souWestSales)
-    {   cout << "Northeast"<<"$";
+    {   
+        cout << "Northeast"<<"$";
         highest = norEastSales;
     }
     
     if(norWestSales > norEastSales && norWestSales > souEastSales && norWestSales > souWestSales)
-    {    cout << "Northwest"<<"$";
+    {    
+        cout << "Northwest"<<"$";
         highest = norWestSales;
     }
     
     if(souEastSales > norEastSales && souEastSales > norWestSales && souEastSales > souWestSales)
-    {   cout << "Southeast"<<"$";
+    {  
+        cout << "Southeast"<<"$";
         highest = souEastSales;
-
     }
     
     if(souWestSales > norEastSales && souWestSales > norWestSales && souWestSales > souEastSales)
-    {   cout << "Southwest:"<<" " << "$";
+    {  
+        cout << "Southwest:"<<" " << "$";
         highest = souWestSales;
-      
     }
     cout << highest;
 }
