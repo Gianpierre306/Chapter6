@@ -11,7 +11,6 @@ int main()
    
     
     getOption();
-    cout << fixed << showpoint << setprecision(2);
     displayPatientData();
     return 0;
 }
