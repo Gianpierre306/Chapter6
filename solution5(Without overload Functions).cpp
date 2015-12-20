@@ -1,3 +1,4 @@
+
 #include <iostream>
 #include <iomanip>
 using namespace std;
@@ -8,7 +9,8 @@ void displayPatientData();
 double checkData(double);
 int main()
 {
-   
+    cout << fixed << showpoint << setprecision(2);
+
     
     getOption();
     displayPatientData();
@@ -21,7 +23,7 @@ char getOption()
     while ( (letter !='I' && letter !='i') && ( letter != 'O' && letter != 'o'))
     {
         cout << "You enter an invalid letter, please enter a valid letter"
-             << "(I) for inpatient & (O) for out of patient:";
+        << "(I) for inpatient & (O) for out of patient:";
         
         cin >> letter;
     }
@@ -38,7 +40,7 @@ void displayPatientData()
     double total;
     switch(letter)
     {
-    case 'I':
+        case 'I':
             cout << "Enter the number of days you spent in the hospital: ";
             days = checkData(days);
             cout << "Enter the daily rate cost to stay at the hospital:";
@@ -47,12 +49,12 @@ void displayPatientData()
             hospitalMedication = checkData(hospitalMedication);
             cout << "Enter the hospital services charges (labs, test etc.): ";
             hospitalService = checkData(hospitalService);
-            total = days + dailyRate +hospitalMedication + hospitalService;
+            total = (days*dailyRate) +hospitalMedication + hospitalService;
             cout << "Total bill:" << "$" << total;
-
+            
             break;
-    
-    case 'i':
+            
+        case 'i':
             cout << "Enter the number of days you spent in the hospital: ";
             days = checkData(days);
             cout << "Enter the daily rate cost to stay at the hospital:";
@@ -61,28 +63,29 @@ void displayPatientData()
             hospitalMedication = checkData(hospitalMedication);
             cout << "Enter the hospital services charges (labs, test etc.): ";
             hospitalService = checkData(hospitalService);
-            total = days + dailyRate +hospitalMedication + hospitalService;
+            total = (days*dailyRate) +hospitalMedication + hospitalService;
+
             cout << "Total bill:" << "$" << total;
-    break;
-    
-    case'O':
+            break;
+            
+        case'O':
             cout << "Enter the hospital services charges(labs, test, etc.):";
             hospitalService = checkData(hospitalService);
-
+            
             cout << "Enter the hopsital medication charges:";
             hospitalMedication = checkData(hospitalMedication);
             total = hospitalService + hospitalMedication;
             cout << "Total bill" <<"$"<< total;
             break;
-    case 'o':
+        case 'o':
             cout << "Enter the hospital services charges(labs, test, etc.):";
             hospitalService = checkData(hospitalService);
-
+            
             cout << "Enter the hopsital medication charges:";
             hospitalMedication =checkData(hospitalMedication);
             total = hospitalService + hospitalMedication;
             cout << "Total bill" <<"$"<< total;
-
+            
             break;
     }
     
