@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 using namespace std;
 
 
@@ -10,6 +11,7 @@ int main()
    
     
     getOption();
+    cout << fixed << showpoint << setprecision(2);
     displayPatientData();
     return 0;
 }
