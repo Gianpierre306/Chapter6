@@ -10,9 +10,7 @@ double checkData(double);
 int main()
 {
     cout << fixed << showpoint << setprecision(2);
-
     
-    getOption();
     displayPatientData();
     return 0;
 }
@@ -32,7 +30,7 @@ char getOption()
 }
 void displayPatientData()
 {
-    char letter;
+    char letter=getOption();
     double days;
     double dailyRate;
     double hospitalMedication;
