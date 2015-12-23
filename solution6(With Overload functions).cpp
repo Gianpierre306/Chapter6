@@ -41,7 +41,6 @@ int main()
     }
     else
     {
-        showInPatientTotal = false;
         cout << "The out-patient total bill:" << "$" << outPatientTotal;
     }
     return 0;
