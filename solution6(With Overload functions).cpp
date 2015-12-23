@@ -60,16 +60,9 @@ void setPatientData(int &days,double &dailyRate,double &hospitalMedication,doubl
     switch(letter)
     {
     case 'I':
-            cout << "Enter the number of days you spent in the hospital: ";
-            days = checkData(days);
-            cout << "Enter the daily rate cost to stay at the hospital:";
-            dailyRate= checkData(dailyRate);
-            cout << "Enter the hospital medication charges:";
-            hospitalMedication = checkData(hospitalMedication);
-            cout << "Enter the hospital services charges (labs, test etc.): ";
-            hospitalService = checkData(hospitalService);
+        
 
-            break;
+          
     
     case 'i':
             cout << "Enter the number of days you spent in the hospital: ";
@@ -84,13 +77,7 @@ void setPatientData(int &days,double &dailyRate,double &hospitalMedication,doubl
     break;
     
     case'O':
-            cout << "Enter the hospital services charges(labs, test, etc.):";
-            hospitalService = checkData(hospitalService);
-
-            cout << "Enter the hopsital medication charges:";
-            hospitalMedication = checkData(hospitalMedication);
-
-            break;
+        
     case 'o':
             cout << "Enter the hospital services charges(labs, test, etc.):";
             hospitalService = checkData(hospitalService);
