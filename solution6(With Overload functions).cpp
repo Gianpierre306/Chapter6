@@ -20,14 +20,7 @@ int main()
     bool showInPatientTotal;
     char letter =  getOption();
     
-    if (letter == 'i' || letter == 'I')
-    {
-        showInPatientTotal = true;
-    }
-    else
-    {
-        showInPatientTotal = false;
-    }
+   showInPatientTotal = (letter =='i' || letter =='I');
     
     setPatientData(days,dailyRate,serviceCharges,medicationCharges, letter);
     
